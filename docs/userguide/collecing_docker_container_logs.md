@@ -75,7 +75,7 @@ Below are the steps to collect docker container logs.
 
 ## Steps for collecting logs if SigNoz is running on a different host.
 
-* If you have a signoz running on a different host then you will have to run a otel-collector to export logs from your host to the host where SigNoz is running.
+If you have a signoz running on a different host then you will have to run a otel-collector to export logs from your host to the host where SigNoz is running.
 
 * We will create a `otel-collector-config.yaml`
   ```yaml
