@@ -1,5 +1,5 @@
 ---
-title: Collecting Docker container logs on the same host
+title: Collecting Docker container logs.
 id: collect_docker_logs
 ---
 
