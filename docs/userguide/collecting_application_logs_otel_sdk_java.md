@@ -5,20 +5,22 @@ id: collecting_application_logs_otel_sdk_java
 
 # Collecting Application Logs Using OTEL Java Agent
 
-You can directly send logs of your application to SigNoz using Java Agent provided by opentlemetry.
+You can directly send your application logs to SigNoz using Java Agent provided by opentlemetry.
 In this blog we will run a sample java application and send the application logs to SigNoz.
 
 
 For collecting logs we will have to download the java agent from [here](https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/latest/download/opentelemetry-javaagent.jar).
 
 
-To sends logs from a Java example you will have to add the agent and add the environment variable and the command will look like
+To sends logs from a Java application you will have to add the agent and add the environment variables for the agent 
+
+The command for it will look like
 ```bash
 OTEL_METRICS_EXPORTER=none OTEL_LOGS_EXPORTER=otlp OTEL_EXPORTER_OTLP_ENDPOINT="http://<IP of SigNoz Backend>:4317" OTEL_RESOURCE_ATTRIBUTES=service.name=<app_name> java -javaagent:/path/opentelemetry-javaagent.jar -jar  <myapp>.jar
 ```
 <br></br>
 
-In the below example we will using configure a java application to send logs to signoz.
+In the below example we will configure a java application to send logs to SigNoz.
 
 ## Steps
 
