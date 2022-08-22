@@ -146,7 +146,14 @@ module.exports = {
                 'userguide/collect_docker_logs',
                 'userguide/collecting_syslogs',
                 'userguide/collect_logs_from_file',
-                'userguide/collecting_application_logs_otel_sdk'
+                {
+                  type: 'category',
+                  label: 'Collecting Application Logs Using OTEL SDK',
+                  items: [
+                    'userguide/collecting_application_logs_otel_sdk_python',
+                    'userguide/collecting_application_logs_otel_sdk_java'
+                  ]
+                }
               ]
             },
             {

@@ -9,11 +9,8 @@ In this blog we will create a simple application that will create a log file and
 
 For this sample application we will be using Python but the same idea can be extended to any application that can write logs to a file.
 
-This guide also assumes that SigNoz is running on that same host where your application is running and the path where logs is getting written can be read by the SigNoz otel-collector container. If there is a case where singoz is running on a different machine, then you will have to run a otel-collector or other agent like FluentBit on your machine to export them to SigNoz otel-collector running on another machine.
 
-
-
-We will create a sample python script name `main.py` and the following code.
+We will create a sample python script name `main.py` and the following code for generating dummy log data.
   ```python
   import logging
   import time

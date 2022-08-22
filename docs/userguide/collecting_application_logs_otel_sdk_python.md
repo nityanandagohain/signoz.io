@@ -1,15 +1,12 @@
 ---
-title: Collecting Application Logs Using OTEL SDK
-id: collecting_application_logs_otel_sdk
+title: Collecting Application Logs Using OTEL Python SDK
+id: collecting_application_logs_otel_sdk_python
 ---
 
-# Collecting Application Logs Using OTEL SDK
+# Collecting Application Logs Using OTEL Python SDK
 
-You can directly send logs of your application to SigNoz using the SDKs provided by opentlemetry.
-In this blog we will create a simple application that will directly push logs to SigNoz otel-collector using the OTLP protocol. 
-
-For this sample application we will be using Python but if the SDKs are available for your corresponding language it will work in the same way, until that you can log your logs to a file and use filereader for pushing it to SigNoz.
-
+You can directly send logs of your application to SigNoz using the Python SDKs provided by opentlemetry.
+In this blog we will create a simple python application that will directly push logs to SigNoz otel-collector using the OTLP protocol. 
 
 ## Steps
 
