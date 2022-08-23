@@ -131,7 +131,7 @@ module.exports = {
         },
         {
           type: 'category',
-          label: 'Logs (WIP)',
+          label: 'Logs',
           link: {
             type: 'doc',
             id: 'userguide/logs',
