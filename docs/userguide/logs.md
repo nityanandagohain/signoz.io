@@ -5,6 +5,13 @@ id: logs
 
 # Overview
 
+
+:::note
+
+Logs supported from **v0.11.0** onwards, Check [`release`](https://github.com/SigNoz/signoz/releases/tag/v0.11.0-rc.1).
+
+:::
+
 Of all telemetry signals, logs have probably the biggest legacy. Most programming languages have built-in logging capabilities or well-known, widely used logging libraries.
 
 OpenTelemetry logs support is added with the philosophy that it should support legacy logs and logging libraries as well as provide improvements and better integration with the rest of the observability world where possible.
