@@ -29,7 +29,7 @@ At SigNoz we use opentelemetry collector to recieve logs which supports the flue
         processors: [ batch ]
         exporters: [  clickhouselogsexporter ]
     ```
-    Here we are updating the logs pipeline which will collect logs from `fluentforward` and `oltp` receiver, processing it using batch processor and export it to clickhouse.
+    Here we are updating the logs pipeline which will collect logs from `fluentforward` and `otlp` receiver, processing it using batch processor and export it to clickhouse.
 
 * Change the fluentBit config to forward the logs to otel collector.
     ```

@@ -128,7 +128,7 @@ If you have a signoz running on a different host then you will have to run a ote
   ```
    Here we are collecting the logs from the path and parsing them using the json parser and extracting the timestamp. After that we are cleaning up the attributes using different operators.You can read more about operators [here](./logs.md#operators-for-parsing-and-manipulating-logs)
 
-  The parsed logs are batched up using the batch processor and then exported to the host where signoz is deployed. The `oltp/log` exporter here uses a http endpoint but if you want to use https you will have to provide the certificate and the key. You can read more about it [here](https://github.com/open-telemetry/opentelemetry-collector/blob/main/exporter/otlpexporter/README.md)
+  The parsed logs are batched up using the batch processor and then exported to the host where signoz is deployed. The `otlp/log` exporter here uses a http endpoint but if you want to use https you will have to provide the certificate and the key. You can read more about it [here](https://github.com/open-telemetry/opentelemetry-collector/blob/main/exporter/otlpexporter/README.md)
 
   For finding the right host and port for your SigNoz cluster please follow the guide [here](../install/troubleshooting.md#signoz-otel-collector-address-grid).  
 

@@ -30,7 +30,7 @@ At SigNoz we use opentelemetry collector to recieve logs which supports the TCP 
       ...
 
       logs:
-        receivers: [ oltp, tcplog/logstash ]
+        receivers: [ otlp, tcplog/logstash ]
         processors: [ batch ]
         exporters: [  clickhouselogsexporter ]
     ```

@@ -68,7 +68,7 @@ SigNoz natively supports OpenTelemetry for collecting logs. OpenTelemetry provid
     
 - **Collecting New first-party application logs**
     
-    It is currently in greenfield development but the basic idea is that the extensions of popular libraries will be provided which will automatically enrich the logs with relevant information from the context, along with that extension will support sending the logs using OLTP protocol to OpenTelemetry Collector.
+    It is currently in greenfield development but the basic idea is that the extensions of popular libraries will be provided which will automatically enrich the logs with relevant information from the context, along with that extension will support sending the logs using OTLP protocol to OpenTelemetry Collector.
     
     Currently OpenTelemetry does’t define a new logging API or create new user-facing logging libraries. The initial goal is to enhance existing popular logging libraries as needed. This is how a typical new application uses OpenTelemetry API, SDK and the existing log libraries
     
@@ -93,7 +93,7 @@ This brings a requirement that the final collector should be SigNoz OTEL collect
 A log receiver is how logs data gets into the OpenTelemetry Collector.
 Different types of receivers supported by OpenTelemetry for logs 
 
-- **[OLTP Receiver](https://github.com/open-telemetry/opentelemetry-collector/blob/main/receiver/otlpreceiver/README.md):-** This receiver receives logs over the OLTP protocol in a specified port. Any library which uses OTEL SDK can forward logs to this protocol. This protocol is also used when OTEL collector needs to forward logs to another OTEL collector.
+- **[OTLP Receiver](https://github.com/open-telemetry/opentelemetry-collector/blob/main/receiver/otlpreceiver/README.md):-** This receiver receives logs over the OTLP protocol in a specified port. Any library which uses OTEL SDK can forward logs to this protocol. This protocol is also used when OTEL collector needs to forward logs to another OTEL collector.
 - **[Filelog Receiver](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/filelogreceiver):-** This receiver can tail and parse files containing logs. 
 - **[Fluent Forward Receiver](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/fluentforwardreceiver):-** This receiver runs a TCP server that accepts events via Fluent Forward Protocol. FluentD and FluentBit can forward logs to this receiver.
 - **[TCP Receiver](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/tcplogreceiver) :-** This receiver runs a TCP server which can receive logs.
@@ -107,7 +107,7 @@ An operator is the most basic unit of log processing. Each operator fulfills a s
 
 For example, a user may parse log lines using `regex_parser` and then use `trace_parser` to parse the `traceId` and `spanId` from the logs.
 
-The receivers FluentForward and OLTP doesn’t have operators. But for parsing them we can use logprocessor.
+The receivers FluentForward and OTLP doesn’t have operators. But for parsing them we can use logprocessor.
 
 - **[csv_parser](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/operators/csv_parser.md)** :- The `csv_parser` operator parses the string-type field selected by `parse_from` with the given header values.
 - **[json_parser](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/operators/json_parser.md) :-** The `json_parser` operator parses the string-type field selected by `parse_from` as JSON.
