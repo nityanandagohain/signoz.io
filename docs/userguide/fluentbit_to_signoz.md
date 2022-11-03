@@ -30,7 +30,13 @@ At SigNoz we use opentelemetry collector to recieve logs which supports the flue
         exporters: [  clickhouselogsexporter ]
     ```
     Here we are updating the logs pipeline which will collect logs from `fluentforward` and `otlp` receiver, processing it using batch processor and export it to clickhouse.
-
+* Expose the port in port for otel-collector in `docker-compose.yaml` file present in `deploy/docker/clickhouse-setup`
+  ```
+  otel-collector:
+    ...
+    ports:
+      - "24224:24224"
+  ```
 * Change the fluentBit config to forward the logs to otel collector.
     ```
     [INPUT]
